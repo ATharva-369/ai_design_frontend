@@ -27,7 +27,7 @@ function ProductMode() {
       formData.append("image", file);
       formData.append("companyDescription", companyDescription);
   
-      const response = await fetch(process.env.BACKEND_URL, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/generate-from-products`, {
         method: "POST",
         body: formData,
       });
