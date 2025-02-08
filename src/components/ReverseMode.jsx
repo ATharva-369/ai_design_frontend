@@ -26,7 +26,7 @@ function ReverseMode() {
         const formData = new FormData();
         formData.append("image", file);
         
-        const response = await fetch("http://localhost:3000/api/reverse-engineer", {
+        const response = await fetch(process.env.BACKEND_URL, {
           method: "POST",
           body: formData,
         });

@@ -22,7 +22,7 @@ function BrandingMode() {
     setError(null);
     
     try {
-      const response = await fetch('http://localhost:3000/api/generate-branding', {
+      const response = await fetch(process.env.BACKEND_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

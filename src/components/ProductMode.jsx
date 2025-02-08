@@ -27,7 +27,7 @@ function ProductMode() {
       formData.append("image", file);
       formData.append("companyDescription", companyDescription);
   
-      const response = await fetch("http://localhost:3000/api/generate-from-products", {
+      const response = await fetch(process.env.BACKEND_URL, {
         method: "POST",
         body: formData,
       });
